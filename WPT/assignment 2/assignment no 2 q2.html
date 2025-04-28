@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>q2 ass2</title>
+</head>
+<style>
+    *{
+ 
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+#f1{
+border-style: solid;
+padding: 50px;
+background: linear-gradient(to bottom,rgb(168, 171, 41),rgb(182, 105, 33));
+}
+#output{
+    border-style:groove;
+    background-color: cadetblue;
+    border-radius: 15px;
+}
+
+</style>
+
+<body>
+
+<h1 align="center">Register here</h1>
+<div class ="main">
+<div id="d1">
+<form id="f1">
+
+     <label for="first"> First name:</label>
+<input type="text" id="first" placeholder="firstName">
+
+<label for="last">Last Name:</label>
+<input type="text" id="last" placeholder="last name">
+
+<label for="mobile">Mobile no:</label>
+<input type="text" id="mobile" placeholder="Mobile no">
+
+<label for="email">Email id:</label>
+<input type="text" id="email" placeholder="Email id:">
+
+<input type="submit" value="register here">
+<input type="reset" value="quit">
+</form>
+</div>
+</div>
+<div id="output"></div>
+<script>
+const form =document.getElementById("f1");
+const outputDiv = document.getElementById("output");
+
+form.addEventListener("submit",function(event){
+    event.preventDefault();
+const first = document.getElementById("first").value;
+
+const last = document.getElementById("last").value;
+const email = document.getElementById("email").value;
+const mobile = document.getElementById("mobile").value;
+
+let resultText ="<p><b> First name:</b>"+first+"</p>";
+resultText+="<p><b> Last Name: </b>"+last+"</p>";
+resultText +="<p><b> Email:</b>"+email+"</p>";
+    resultText +="<p><b> Mobile no:</b>"+mobile+"</p>";
+    outputDiv.innerHTML = resultText;
+});
+
+
+
+</script>
+</body>
+</html>
