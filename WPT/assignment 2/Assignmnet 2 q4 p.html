@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Assignmnet 2 q4 p</title>
+</head>
+<style>
+.highlight{
+
+background-color:red ;
+
+}
+#d1{
+    border-style: solid;
+}
+
+</style>
+<body>
+<div id ="d1">
+<p id="paragraph" align="center">
+    We have just started <b>this</b> section for the user(<b>beginner</b> to <b>intermidate</b>)  
+    who <b>want</b> to work with <b>various</b> JavaScript <b>problems</b> and write scripts
+    online to <b>test</b> their javascript <b>skills</b>.
+
+</p>
+
+</div>
+
+<script>
+    const highlight =document.getElementById("paragraph");
+const para =document.getElementById("paragraph");
+const bold =document.getElementsByTagName("b");
+
+highlight.addEventListener("mouseover",function(){
+
+for(let i =0 ;i < bold.length;i++)
+
+bold[i].classList.add("highlight");
+});
+
+highlight.addEventListener("mouseout",function(){
+
+
+for(let i = 0; i < bold.length; i++)
+bold[i].classList.remove("highlight");
+
+});
+
+</script>
+</body>
+</html>
