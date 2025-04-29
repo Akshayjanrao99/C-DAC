@@ -1,0 +1,55 @@
+<html>
+<head>
+<title> Assignment no 2  Q3</title>
+</head>
+<style>
+    *{
+       
+        margin: 20px;
+    }
+#main{
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 50px;
+    background-color: rgb(70, 151, 154);
+}
+
+
+
+</style>
+<body>
+<div id="main">
+<h1 align="center">select subject</h1>
+<p align="center"><select id="subject">
+<option value="bce"> Basic civil engineering</option>
+<option value="fm">Fluid mechanics</option>
+<option value="afm">Advance Fluid mechanics</option>
+<option value="hs">Hydraulic Structure</option>
+<option value="gwm">Ground water management</option>
+</select>
+</p>
+
+</div>
+
+
+    <p align="center"><button onclick="removesubject()">Remove subject</button></p>
+
+
+
+
+
+<script>
+function removesubject() {
+const a1 = document.getElementById("subject");
+const selected = a1.selected
+
+if(a1.selected >= 0){
+a1.remove(a1.selected);
+}else{
+    alert("select subject that scares you!!");
+}
+}
+</script>
+</body>
+</html>
